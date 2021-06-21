@@ -1,0 +1,432 @@
+body {
+    background: #121212 center no-repeat fixed;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-image: url("../media/car-8.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #ffffff;
+    width: 100%;
+    height: 100vh;
+}
+#banner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-right: 10%;
+    background-color: #121212cc;
+}
+#logo {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(3, 118px);
+    grid-template-rows: repeat(3, 118px);
+    gap: 8px;
+    padding: 48px;
+    font-family: 'Orbitron';
+    font-size: 48px;
+}
+#logo div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+}
+#glyph-0 {
+    opacity: 23%;
+}
+#glyph-1 {
+    opacity: 34%;
+}
+#glyph-2 {
+    opacity: 45%;
+}
+#glyph-3 {
+    opacity: 56%;
+}
+#glyph-4 {
+    opacity: 67%;
+}
+#glyph-5 {
+    opacity: 78%;
+}
+#glyph-6 {
+    opacity: 89%;
+}
+#glyph-7 {
+    opacity: 100%;
+}
+#glyph-8 {
+    border: 2px solid crimson;
+    color: crimson;
+    background-color: transparent;
+    animation: glow 1.5s infinite alternate ease-in;
+}
+@keyframes glow {
+    from {
+        text-shadow: none;
+        color: hsla(348, 83%, 47%, 0.2);
+        border-color: hsla(348, 83%, 47%, 0.2);
+    }
+    to {
+        text-shadow: 0 0 8px crimson;
+        color: crimson;
+        border-color: crimson;
+    }
+}
+#credits {
+    display: flex;
+    flex-direction: column;
+    margin-top: 48px;
+    font-family: 'Varela';
+    color: #ffffff80;
+}
+#credits:hover #smallText, #credits:hover #largeText {
+    color: #ffffffbf;
+}
+#smallText {
+    width: 100%;
+    text-align: right;
+    font-size: 14px;
+}
+#largeText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-variant: small-caps;
+}
+#largeText i {
+    margin-right: 8px;
+    color: #6e5494;
+}
+#nav-arrow {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+    bottom: 1vh;
+    position: absolute;
+    bottom: 1%;
+    z-index: 9;
+}
+#nav-arrow a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: fit-content;
+    height: fit-content;
+}
+#nav-arrow i {
+    animation: hop 850ms infinite alternate ease-in-out;
+}
+@keyframes hop {
+    from {
+        color: #ffffff00;
+        transform: translateY(-10%);
+        text-shadow: none;
+    }
+    to {
+        color: #ffffff;
+        transform: translateY(10%);
+        text-shadow: 0 0 8px white;
+    }
+}
+.heading {
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 100%;
+    padding: 24px 48px;
+}
+h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Orbitron';
+    font-weight: 100;
+    font-size: 95px;
+    padding: 0 0 0 32px;
+    border-left: 4px solid crimson;
+}
+#section-0 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    height: 70vh;
+}
+.slide {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    width: 0; /* ! I have no idea why, but it works. Keep this at 0 */
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: flex 1.2s ease-in-out, transform 500ms ease-in-out;
+    transform-origin: center;
+    flex: 1;
+    overflow: clip;
+}
+#slide-0 {
+    background-image: url("../media/car-18.jpg");
+    margin: 0 -1px 0 0;
+}
+#slide-1 {
+    background-image: url("../media/continental.jpg");
+    margin: 0 -1px 0 -1px;
+}
+#slide-2 {
+    background-image: url("../media/performance.jpg");
+    margin: 0 -1px 0 -1px;
+}
+#slide-3 {
+    background-image: url("../media/oldtimer.jpg");
+    margin: 0 -1px 0 -1px;
+}
+#slide-4 {
+    background-image: url("../media/components.jpg");
+    margin: 0 0 0 -1px;
+}
+.ui-hint {
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #121212cc;
+    width: 100%;
+    height: 100%;
+}
+.ui-hint span {
+    font-size: 48px;
+    font-variant: small-caps;
+    color: #ffffff;
+}
+.description {
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    width: 33.33%;
+    height: 100%;
+    opacity: 0;
+    background-color: #ffffff;
+    color: #121212;
+    overflow-x: hidden;
+    transition: all 1s;
+    transform: translateX(-100%);
+}
+.category {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.category h3 {
+    font-size: 48px;
+}
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    width: 100%;
+    height: 100%;
+}
+.info p {
+    width: 15vw;
+}
+.explore {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 24px;
+}
+.link-btn {
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 1px solid #121212;
+    color: #121212;
+}
+.link-btn:hover {
+    background-color: #121212;
+    color: white;
+}
+.close-btn {
+    position: absolute;
+    bottom: 1vw;
+    right: 1vw;
+    font-size: 30px;
+    color: #121212cc;
+}
+.close-btn:hover {
+    color: crimson;
+}
+#section-1 {
+    position: relative;
+    width: 100vw;
+    height: 30vh;
+    background-color: #ffffff20;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+#section-1 i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25vh;
+    padding: 0 1vw;
+    font-size: 48px;
+    color: #121212bf;
+    filter: drop-shadow(0 0 10px #121212bf);
+    z-index: 9;
+}
+#section-1 i:hover {
+    color: #121212;
+}
+#section-1 .fa-angle-left {
+    position: absolute;
+    left: 0;
+}
+#section-1 .fa-angle-right {
+    position: absolute;
+    right: 0;
+}
+#brands {
+    height: 25vh;
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    gap: 0 2vw;
+    background-color: #e6e6e6;
+    padding: 0 2.5vw;
+}
+.brand {
+    height: 100%;
+    width: 22.5vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30%;
+    transition: all 350ms ease-in-out;
+}
+.brand:hover {
+    background-color: #ffffff;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.20);
+    transform: scale(1.1);
+}
+#volkswagen {
+    background-image: url("../media/Volkswagen-logo.png");
+}
+#ford {
+    background-image: url("../media/ford-logo.png");
+    background-size: 40%;
+}
+#porsche {
+    background-image: url("../media/porsche-logo.png");
+    background-size: 50%;
+}
+#jeep {
+    background-image: url("../media/Jeep-logo.png");
+    background-size: 40%;
+}
+#nissan {
+    background-image: url("../media/nissan-logo.png");
+}
+#bugatti {
+    background-image: url("../media/Bugatti-logo-1024x768.png");
+    background-size: 40%;
+}
+#mercedesBenz {
+    background-image: url("../media/Mercedes-Benz-logo-2011-1920x1080.png");
+    background-size: 50%;
+}
+#lincoln {
+    background-image: url("../media/Lincoln-logo-2019-1920x1080.png");
+    background-size: 50%;
+}
+#rollsRoyce {
+    background-image: url("../media/Rolls-Royce-logo-2048x2048.png");
+}
+#lamborghini {
+    background-image: url("../media/lamborghini-logo-1000x1100.png");
+}
+#tesla {
+    background-image: url("../media/tesla-logo.png");
+}
+#audi {
+    background-image: url("../media/Audi-logo-2009-1920x1080.png");
+    background-size: 40%;
+}
+#mitsubishi {
+    background-image: url("../media/Mitsubishi-logo-2000x2500.png");
+}
+#toyota {
+    background-image: url("../media/toyota-logo-2019-3700x1200.png");
+    background-size: 50%;
+}
+#peugeot {
+    background-image: url("../media/Peugeot-logo-2010-1920x1080.png");
+    background-size: 50%;
+}
+#heading-2, #heading-3 {
+    background-color: #ffffff;
+    color: #121212;
+}
+footer {
+    width: 100%;
+    height: 33.33vh;
+    display: grid;
+    grid-template-columns: 1fr min-content 1fr min-content 1fr;
+    align-items: center;
+    justify-content: center;
+    background-color: #121212;
+    color: crimson;
+}
+.separator {
+    height: 80%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+.top {
+    width: 4px;
+    height: 100%;
+    background-image: linear-gradient(to top, crimson 70%, transparent);
+}
+.bottom {
+    width: 4px;
+    height: 100%;
+    background-image: linear-gradient(to bottom, crimson 70%, transparent);
+}

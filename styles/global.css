@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'Dosis';
+    src: url(../fonts/Dosis-ExtraLight.ttf);
+}
+@font-face {
+    font-family: 'Varela';
+    src: url(../fonts/VarelaRound-Regular.ttf);
+}
+@font-face {
+    font-family: 'Orbitron';
+    src: url(../fonts/Orbitron-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: 'Poiret';
+    src: url(../fonts/PoiretOne-Regular.ttf);
+}
+@font-face {
+    font-family: 'Exo';
+    src: url(../fonts/Exo-Light.ttf);
+}
+html, body, main, section {
+    width: 100vw;
+    font-family: 'Dosis', 'Varela', 'Orbitron', Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    overflow-x: clip;
+}
+::-webkit-scrollbar {
+    display: none;
+}
