@@ -1,4 +1,10 @@
 
+// * Initialization //
+
+document.querySelectorAll('.slide').forEach(element => {
+    element.style.flex = '1 1 0%';
+});
+
 // * log entries //
 
 let logCount = 1;
@@ -31,7 +37,7 @@ function openSlide(target){
     if (target.style.flex !== '10 1 0%') {
         target.style.transform = 'scale(1)';
         target.style.flex = '10 1 0%';
-        target.style.boxShadow = '0 24px 38px 3px rgba(0,0,0,0.14), 0 9px 46px 8px rgba(0,0,0,0.12), 0 11px 15px -7px rgba(0,0,0,0.20)';
+        target.style.boxShadow = 'none';
         document.querySelector(selectorString).style.transform = 'translateX(0)';
         document.querySelector(selectorString).style.opacity = 1;
         document.querySelector('#' + target.id + ' ' + '.ui-hint').style.visibility = 'hidden';
@@ -67,7 +73,6 @@ function removeFocusEffects(target) {
         target.style.transform = 'scale(1)';
         target.style.boxShadow = 'none';
         document.querySelector('#' + target.id + ' ' + '.ui-hint').style.visibility = 'hidden';
-        target.style.zIndex = 0;
     }
 }
 
