@@ -76,6 +76,51 @@ function removeFocusEffects(target) {
     }
 }
 
+/**
+document.getElementById("brands").style.transform = 'translate(0)';
+function scroll(direction) {
+    const target = document.getElementById("brands").style.transform;
+    console.log(target);
+    const x1 = 'translate(0px)';
+    const x2 = 'translate(20px)';
+    const x3 = 'translate(40%)';
+    const x4 = 'translate(60%)';
+    const x5 = 'translate(80%)';
+    const x6 = 'translate(100%)';
+    if (direction == '<<') {
+        if (target == x1) {
+            target = x2;
+            console.log(target);
+        } else if (target == x2) {
+            target = x3;
+        } else if (target == x3) {
+            target = x4;
+        } else if (target == x4) {
+            target = x5;
+        } else if (target == x5) {
+            target = x6;
+        }
+    } else if (direction == '>>') {
+        if (target == x6) {
+            target = x5;
+            console.log(target);
+        } else if (target == x5) {
+            target = x4;
+            console.log(target);
+        } else if (target == x4) {
+            target = x3;
+            console.log(target);
+        } else if (target == x3) {
+            target = x2;
+            console.log(target);
+        } else if (target == x2) {
+            target = x1;
+            console.log(target);
+        }
+    }
+}
+*/
+
 // * load event listeners //
 
 document.querySelectorAll('.slide').forEach(element => {
@@ -83,3 +128,5 @@ document.querySelectorAll('.slide').forEach(element => {
     element.addEventListener('mouseenter', () => {addFocusEffects(element)});
     element.addEventListener('mouseleave', () => {removeFocusEffects(element)});
 });
+document.getElementById("scroll-left").addEventListener('click', () => {scroll('<<')});
+document.getElementById("scroll-right").addEventListener('click', () => {scroll('>>')});
