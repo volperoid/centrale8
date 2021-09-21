@@ -402,8 +402,12 @@ h2 {
     background-image: url("../media/Peugeot-logo-2010-1920x1080.png");
     background-size: 50%;
 }
+#heading-3 {
+    width: 100%;
+    height: 50vh;
+}
 iframe {
-    width: 100vw;
+    width: 100%;
     height: 50vh;
 }
 footer {
