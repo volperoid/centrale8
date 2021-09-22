@@ -402,22 +402,23 @@ h2 {
 #section-2 {
     width: 100%;
     height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    justify-content: center;
     background-image: url('../media/vintage-2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
-#heading-2 {
+#shades {
     width: 100%;
     height: 100%;
-    background-color: rgba(40, 40, 40, 0.8);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    background-color: rgba(50, 50, 50, 0.8);
 }
 iframe {
-    width: 100%;
-    height: 100%;
+    width: 70%;
+    height: 70%;
 }
 h2 span {
     color: crimson;
