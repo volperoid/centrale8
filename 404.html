@@ -29,6 +29,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr;
+            gap: 10vw;
             align-items: center;
             justify-items: center;
             justify-content: center;
@@ -38,14 +39,18 @@
         }
         div {
             display: flex;
-            align-items: center;
-            justify-content: center;
             width: 100%;
             height: 100%;
             overflow: hidden;
         }
         div#description {
             flex-direction: column;
+            align-items: flex-end;
+            justify-content: center;
+        }
+        div#illustration {
+            align-items: center;
+            justify-content: flex-start;
         }
         h1 {
             font-size: 6rem;
@@ -62,10 +67,10 @@
             text-decoration: none;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
         }
         img {
-            height: 100%;
+            width: 70%;
         }
     </style>
 </head>
@@ -82,7 +87,7 @@
         <div id="illustration">
             <a href="index.html">
                 <img src="media/svg/closed_door.svg"
-                onmouseover="this.src='media/svg/open_door_fx.svg'"
+                onmouseover="this.src='media/svg/open_door.svg'"
                 onmouseout="this.src='media/svg/closed_door.svg'"
                 alt="back-to-homepage"/>
             </a>
