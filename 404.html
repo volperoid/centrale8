@@ -56,6 +56,11 @@
         span {
             color: crimson;
         }
+        #illustration a {
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+        }
         img {
             height: 100%;
         }
@@ -71,11 +76,13 @@
                 This page does not exist. Yet...
             </h2>
         </div>
-        <div>
-            <img src="media/svg/closed_door.svg"
-            onmouseover="this.src='media/svg/open_door_fx.svg'"
-            onmouseout="this.src='media/svg/closed_door.svg'"
-            alt="back-to-homepage"/>
+        <div id="illustration">
+            <a href="index.html">
+                <img src="media/svg/closed_door.svg"
+                onmouseover="this.src='media/svg/open_door_fx.svg'"
+                onmouseout="this.src='media/svg/closed_door.svg'"
+                alt="back-to-homepage"/>
+            </a>
         </div>
     </main>
 </body>
