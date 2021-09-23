@@ -450,3 +450,19 @@ footer {
     height: 100%;
     background-image: linear-gradient(to bottom, crimson 70%, transparent);
 }
+#links {
+    padding-left: 10%;
+    display: flex;
+    flex-direction: column;
+}
+#links a {
+    padding: 2% 0;
+    color: white;
+    text-decoration: none;
+    font-family: 'Orbitron';
+    font-size: 0.75rem;
+}
+#links a:hover {
+    cursor: pointer;
+    color: crimson;
+}
