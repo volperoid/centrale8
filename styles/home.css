@@ -289,6 +289,7 @@ footer {
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr max-content;
     align-items: center;
     justify-content: center;
     background-color: rgb(30, 35, 40);
@@ -303,14 +304,30 @@ footer {
     height: max-content;
 }
 #menu, #contact, #about {
+    width: 100%;
+    height: 100%;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 3fr;
     align-items: center;
-    justify-content: flex-start;
+    justify-items: center;
+    justify-content: center;
 }
-#menu a {
-    padding: 2% 0;
+footer ul {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 1fr);
+}
+footer li {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+li a {
     color: white;
     text-decoration: none;
     font-size: 0.75rem;
