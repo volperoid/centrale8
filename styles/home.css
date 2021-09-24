@@ -315,10 +315,11 @@ footer {
 }
 footer ul {
     width: 100%;
-    height: 100%;
+    height: max-content;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(7, 1fr);
+    list-style-type: none;
 }
 footer li {
     width: 100%;
