@@ -9,6 +9,7 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Caveat&family=Dosis:wght@200&family=Poiret+One&family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
 
     <title>Page Not Found</title>
     <style>
@@ -34,14 +35,13 @@
             justify-items: center;
             justify-content: center;
             font-family: 'Dosis';
-            font-variant: small-caps;
             color: white;max-height: 100vh;
         }
         div {
             display: flex;
             width: 100%;
             height: 100%;
-            overflow: hidden;
+            overflow: clip;
         }
         div#description {
             flex-direction: column;
@@ -52,11 +52,21 @@
             align-items: center;
             justify-content: flex-start;
         }
+        div#header-group {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            width: max-content;
+            height: 100%;
+        }
         h1 {
             font-size: 6rem;
         }
         h2 {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
+            padding-left: 0.5rem;
+            color: lightseagreen;
         }
         span {
             color: crimson;
@@ -77,12 +87,16 @@
 <body>
     <main>
         <div id="description">
-            <h1>
-                ERROR <span>404</span>
-            </h1>
-            <h2>
-                This page does not exist. Yet...
-            </h2>
+            <div id="header-group">
+                <h1>
+                    ERROR <span>404</span>
+                </h1>
+                <h2>
+                    Uh-oh! This page does not exist... yet. <br>
+                    Better head back for now.
+                </h2>
+            </div>
+
         </div>
         <div id="illustration">
             <a href="index.html">
