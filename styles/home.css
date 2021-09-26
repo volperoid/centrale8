@@ -1,7 +1,30 @@
-body {
-    background: #121212 center no-repeat fixed;
+
+/* Global Styling - HTML, Body, Pseudo-, Etc. */
+
+html, body {
+    width: 100vw;
+    font-family: 'Varela Round', Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: clip;
+    scrollbar-width: none;
+    scroll-snap-type: y mandatory;
 }
-header {
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Global Page Section Styling */
+
+section {
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+/* Front Cover Styling */
+
+#section-0 {
+    scroll-snap-align: start;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -42,30 +65,14 @@ header {
     height: 100%;
     padding: 5px;
 }
-#glyph-0 {
-    opacity: 23%;
-}
-#glyph-1 {
-    opacity: 34%;
-}
-#glyph-2 {
-    opacity: 45%;
-}
-#glyph-3 {
-    opacity: 56%;
-}
-#glyph-4 {
-    opacity: 67%;
-}
-#glyph-5 {
-    opacity: 78%;
-}
-#glyph-6 {
-    opacity: 89%;
-}
-#glyph-7 {
-    opacity: 100%;
-}
+#glyph-0 { opacity: 23%; }
+#glyph-1 { opacity: 34%; }
+#glyph-2 { opacity: 45%; }
+#glyph-3 { opacity: 56%; }
+#glyph-4 { opacity: 67%; }
+#glyph-5 { opacity: 78%; }
+#glyph-6 { opacity: 89%; }
+#glyph-7 { opacity: 100%; }
 #glyph-8 {
     border: 2px solid crimson;
     color: crimson;
@@ -91,9 +98,6 @@ header {
     font-family: 'Varela Round';
     color: #ffffff80;
 }
-#credits:hover #smallText, #credits:hover #largeText {
-    color: #ffffffbf;
-}
 #smallText {
     width: 100%;
     text-align: right;
@@ -106,42 +110,33 @@ header {
     font-size: 24px;
     font-variant: small-caps;
 }
+#credits:hover #smallText,
+#credits:hover #largeText {
+    color: #ffffffbf;
+}
 #largeText i {
     margin-right: 8px;
     color: #6e5494;
 }
-.heading {
-    height: 30vh;
+
+/* wip *//* Section 2 - Product Category Accordion *//* wip */
+/* ! *//* Significant Performance Issues *//* ! */
+/* ? *//* Consult Lighthouse Metrics - Target score: > 90 *//* ? */
+
+#section-2 {
+    font-family: 'Dosis';
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    width: 100%;
-    padding: 24px 48px;
-}
-h2 {
-    font-family: 'Orbitron';
-    font-weight: 100;
-    font-size: 95px;
-    padding: 0 0 0 32px;
-    border-left: 4px solid crimson;
-}
-#section-0 {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    justify-content: center;
-    height: 70vh;
 }
 .slide {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     text-align: center;
-    width: 0; /* ! I have no idea why, but it works. Keep this at 0 */
     height: 100%;
-    transition: flex 1.2s ease-in-out, transform 500ms ease-in-out;
+    transition: flex 1s ease-in-out;
     transform-origin: center;
     flex: 1;
     overflow: clip;
@@ -149,27 +144,22 @@ h2 {
 #slide-0 {
     background: url("../media/car-18.jpg") no-repeat center;
     background-size: cover;
-    margin: -1px -1px -1px 0;
 }
 #slide-1 {
     background: url("../media/continental.jpg") no-repeat center;
     background-size: cover;
-    margin: -1px -1px -1px -1px;
 }
 #slide-2 {
     background: url("../media/performance.jpg") no-repeat center;
     background-size: cover;
-    margin: -1px -1px -1px -1px;
 }
 #slide-3 {
     background: url("../media/oldtimer.jpg") no-repeat center;
     background-size: cover;
-    margin: -1px -1px -1px -1px;
 }
 #slide-4 {
     background: url("../media/components.jpg") no-repeat center;
     background-size: cover;
-    margin: -1px 0 -1px -1px;
 }
 .ui-hint {
     visibility: hidden;
@@ -182,6 +172,7 @@ h2 {
     height: 100%;
 }
 .ui-hint span {
+    user-select: none;
     font-size: 48px;
     font-variant: small-caps;
     color: #ffffff;
@@ -198,20 +189,9 @@ h2 {
     opacity: 0;
     background-color: #ffffff;
     color: #121212;
-    overflow-x: hidden;
+    overflow-x: clip;
     transition: all 1s;
     transform: translateX(-100%);
-}
-.category {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-}
-.category h3 {
-    font-size: 48px;
-    font-variant: small-caps;
 }
 .info {
     display: flex;
@@ -256,14 +236,40 @@ h2 {
 .close-btn:hover {
     color: crimson;
 }
-#section-2 {
-    width: 100%;
-    height: 100vh;
+
+/* wip *//* Section 3 Styling - Employee Cards *//* wip */
+
+#section-3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* * *//* Section 4 Styling - Google Maps *//* * */
+
+#section-4 {
     background-image: url('../media/vintage-2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
-#shades {
+#section-4 .heading {
+    width: 70%;
+    height: 70%;
+    padding-right: 3rem;
+    border-right: 4px solid crimson;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+#section-4 .heading h1 {
+    font-family: 'Orbitron';
+    font-weight: 100;
+    font-size: 7rem;
+    text-align: right;
+    text-indent: 3rem;
+}
+#filter {
     width: 100%;
     height: 100%;
     display: grid;
@@ -271,18 +277,32 @@ h2 {
     align-items: center;
     justify-items: center;
     justify-content: center;
-    background-color: rgba(50, 50, 50, 0.8);
+    background-color: rgba(30, 35, 45, 0.7);
 }
-iframe {
+iframe#map-embed {
     width: 70%;
     height: 70%;
 }
-h2 span {
+h1 span {
     color: crimson;
 }
+
+/* * *//* Page Footer Styling *//* * */
+
 footer {
+    scroll-snap-align: start;
     width: 100%;
     height: 50vh;
+    font-family: 'Dosis';
+    font-size: 1rem;
+    color: antiquewhite;
+}
+footer a {
+    color: antiquewhite;
+}
+footer a:hover {
+    cursor: pointer;
+    color: crimson;
 }
 #links{
     width: 100%;
@@ -291,49 +311,77 @@ footer {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr max-content;
     align-items: center;
-    justify-content: center;
+    justify-items: center;
     background-color: rgb(30, 35, 40);
-    font-family: 'Varela Round';
+    box-shadow: inset 0 10px 14px hsla(210, 14%, 4%, 0.3), inset 0 -10px 14px hsla(210, 14%, 4%, 0.3);
+}
+#menu {
+    font-weight: bold;
+    width: 70%;
+    height: 70%;
+    display: grid;
+    list-style-type: none;
+    grid-template:
+    "a e" 1fr
+    "b f" 1fr
+    "c g" 1fr
+    "d h" 1fr / 1fr 1fr;
+}
+#menu .a { grid-area: a; }
+#menu .b { grid-area: b; }
+#menu .c { grid-area: c; }
+#menu .d { grid-area: d; }
+#menu .e { grid-area: e; }
+#menu .f { grid-area: f; }
+#menu .g { grid-area: g; }
+#menu .h { grid-area: h; }
+#menu li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#menu a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.arrow {
+    visibility: hidden;
     color: crimson;
+}
+#menu a:hover .arrow {
+    visibility: visible;
 }
 #copyright {
+    width: 100%;
+    height: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: max-content;
+    font-family: 'Varela Round';
+    font-size: 0.75rem;
+    background-color: #121212;
 }
-#menu, #contact, #about {
-    width: 100%;
+#copyright .grid {
+    width: fit-content;
     height: 100%;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 3fr;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: 1fr;
+    gap: 2rem;
     align-items: center;
-    justify-items: center;
     justify-content: center;
 }
-footer ul {
-    width: 100%;
-    height: max-content;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(7, 1fr);
-    list-style-type: none;
-}
-footer li {
-    width: 100%;
-    height: max-content;
+#webmaster, #webmaster a {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-li a {
-    color: white;
-    text-decoration: none;
-    font-size: 0.75rem;
-}
-#menu a:hover {
+#foxLogo {
     cursor: pointer;
-    color: crimson;
+    height: 3em;
+    transition: transform 500ms ease-in-out;
+}
+footer a:hover #foxLogo {
+    transform: rotateZ(1turn);
 }
