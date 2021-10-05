@@ -186,7 +186,7 @@ section {
     justify-content: center;
     width: 33.33%;
     height: 100%;
-    opacity: 0;
+    opacity: 1;
     background-color: #ffffff;
     color: #121212;
     overflow-x: clip;
@@ -240,9 +240,8 @@ section {
 /* wip *//* Section 3 Styling - Employee Cards *//* wip */
 
 #section-3 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    height: 100vh;
 }
 
 /* * *//* Section 4 Styling - Google Maps *//* * */
