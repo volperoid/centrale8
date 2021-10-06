@@ -223,6 +223,7 @@ section {
     opacity: 0;
     background-color: #ffffff;
     color: #121212;
+    box-shadow: 10px 10px 0 0 20px rgb(240, 8, 8), 6px 6px 0 0 6px rgb(255, 0, 0);
     overflow-x: clip;
     transition: all 1s ease-in-out;
     transform: translateX(-100%);
@@ -307,6 +308,9 @@ h1 span {
 /* * *//* Page Footer Styling *//* * */
 
 footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 1fr 3rem;
     scroll-snap-align: start;
     width: 100%;
     height: 50vh;
@@ -321,57 +325,37 @@ footer a:hover {
     cursor: pointer;
     color: crimson;
 }
-#links{
+#panel{
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1.5fr 1.5fr;
     grid-template-rows: 1fr max-content;
     align-items: center;
     justify-items: center;
     background-color: rgb(30, 35, 40);
-    box-shadow: inset 0 10px 14px hsla(210, 14%, 4%, 0.3), inset 0 -10px 14px hsla(210, 14%, 4%, 0.3);
 }
-#menu {
-    font-weight: bold;
-    width: 70%;
-    height: 70%;
+#panel > div {
     display: grid;
-    list-style-type: none;
-    grid-template:
-    "a e" 1fr
-    "b f" 1fr
-    "c g" 1fr
-    "d h" 1fr / 1fr 1fr;
-}
-#menu .a { grid-area: a; }
-#menu .b { grid-area: b; }
-#menu .c { grid-area: c; }
-#menu .d { grid-area: d; }
-#menu .e { grid-area: e; }
-#menu .f { grid-area: f; }
-#menu .g { grid-area: g; }
-#menu .h { grid-area: h; }
-#menu li {
-    display: flex;
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content max-content;
+    gap: 1rem;
     align-items: center;
     justify-content: center;
 }
-#menu a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.arrow {
-    visibility: hidden;
-    color: crimson;
-}
-#menu a:hover .arrow {
-    visibility: visible;
-}
-#copyright {
+#panel h3,
+#panel ul,
+#panel li {
     width: 100%;
-    height: 3rem;
+}
+#carousel {
+    width: 100%;
+    height: 100%;
+    background-color: #181818;
+}
+#bottomBar {
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -379,7 +363,7 @@ footer a:hover {
     font-size: 0.75rem;
     background-color: #121212;
 }
-#copyright .grid {
+#bottomBar > div {
     width: fit-content;
     height: 100%;
     display: grid;
@@ -389,7 +373,16 @@ footer a:hover {
     align-items: center;
     justify-content: center;
 }
-#webmaster, #webmaster a {
+#legal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: crimson;
+}
+#legal a {
+    padding: 0 0.5rem;
+}
+#designer, #designer a {
     display: flex;
     align-items: center;
     justify-content: center;
