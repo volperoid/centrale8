@@ -1,4 +1,35 @@
 
+@font-face {
+    font-family: "Orbitron";
+    src: url(../fonts/Orbitron-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: "Varela Round";
+    src: url(../fonts/VarelaRound-Regular.ttf);
+}
+@font-face {
+    font-family: "Dosis";
+    src: url(../fonts/Dosis-ExtraLight.ttf);
+}
+@font-face {
+    font-family: "Nunito";
+    src: url(../fonts/Nunito-ExtraLight.ttf);
+}
+@font-face {
+    font-family: "Spartan";
+    src: url(../fonts/Spartan-Light.ttf);
+}
+/*
+@font-face {
+    font-family: "Sacramento";
+    src: url(../fonts/Sacramento-Regular.ttf);
+}
+@font-face {
+    font-family: "Satisfy";
+    src: url(../fonts/Satisfy-Regular.ttf);
+}
+*/
+
 /* Global Styling - HTML, Body, Pseudo-, Etc. */
 
 html, body {
@@ -124,7 +155,7 @@ section {
 /* ? *//* Consult Lighthouse Metrics - Target score: > 90 *//* ? */
 
 #section-2 {
-    font-family: 'Dosis';
+    font-family: 'Nunito';
     display: flex;
     align-items: center;
     justify-content: center;
@@ -167,55 +198,51 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #121212cc;
+    background-color: hsla(0, 0%, 7%, 0.9);
     width: 100%;
     height: 100%;
+    z-index: 2;
 }
 .ui-hint span {
     user-select: none;
-    font-size: 48px;
+    font-size: 2.5rem;
     font-variant: small-caps;
     color: #ffffff;
 }
 .description {
-    position: relative;
+    position: absolute;
+    left: 0;
+    z-index: 1;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     align-items: center;
     justify-items: center;
     justify-content: center;
-    width: 33.33%;
+    width: 23.806vw;
     height: 100%;
-    opacity: 1;
+    opacity: 0;
     background-color: #ffffff;
     color: #121212;
     overflow-x: clip;
-    transition: all 1s;
+    transition: all 1s ease-in-out;
     transform: translateX(-100%);
+}
+.description h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+
 }
 .info {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
-    width: 100%;
+    font-size: 1.2rem;
+    width: 70%;
     height: 100%;
-}
-.info p {
-    width: 15vw;
-}
-.explore {
-    width: max-content;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    font-size: 24px;
 }
 .link-btn {
-    font-variant: small-caps;
-    width: 100%;
+    text-transform: uppercase;
+    width: max-content;
     display: block;
     text-decoration: none;
     padding: 10px 20px;
@@ -225,16 +252,6 @@ section {
 .link-btn:hover {
     background-color: #121212;
     color: white;
-}
-.close-btn {
-    position: absolute;
-    bottom: 1vw;
-    right: 1vw;
-    font-size: 30px;
-    color: #121212cc;
-}
-.close-btn:hover {
-    color: crimson;
 }
 
 /* wip *//* Section 3 Styling - Employee Cards *//* wip */
@@ -265,6 +282,7 @@ section {
     font-family: 'Orbitron';
     font-weight: 100;
     font-size: 7rem;
+    text-transform: uppercase;
     text-align: right;
     text-indent: 3rem;
 }
