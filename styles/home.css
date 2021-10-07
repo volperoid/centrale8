@@ -32,7 +32,8 @@
 
 /* Global Styling - HTML, Body, Pseudo-, Etc. */
 
-html, body {
+html,
+body {
     width: 100vw;
     font-family: 'Varela Round', Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
@@ -86,9 +87,9 @@ section {
     gap: 8px;
     padding: 48px;
     font-family: 'Orbitron';
-    font-size: 48px;
+    font-size: 3rem;
 }
-#logo div {
+#logo span {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -145,9 +146,9 @@ section {
 #credits:hover #largeText {
     color: #ffffffbf;
 }
-#largeText i {
-    margin-right: 8px;
-    color: #6e5494;
+#largeText img {
+    height: 1em;
+    margin-right: 0.5em;
 }
 
 /* wip *//* Section 2 - Product Category Accordion *//* wip */
@@ -277,7 +278,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: #ffffff;
 }
 #section-4 .heading h1 {
     font-family: 'Orbitron';
@@ -316,10 +317,10 @@ footer {
     height: 50vh;
     font-family: 'Dosis';
     font-size: 1rem;
-    color: antiquewhite;
+    color: #faebd7;
 }
 footer a {
-    color: antiquewhite;
+    color: #faebd7;
 }
 footer a:hover {
     cursor: pointer;
@@ -336,6 +337,12 @@ footer a:hover {
     justify-items: center;
     padding: 5% 0;
     background-color: rgb(30, 35, 40);
+}
+#panel ul {
+    height: 100%;
+}
+#panel li {
+    margin: 0.5rem 0;
 }
 #services,
 #pricing,
@@ -362,11 +369,22 @@ footer a:hover {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
 }
-#panel ul {
-    height: 100%;
+#subscribe form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-#panel li {
-    margin: 0.5rem 0;
+#subscribe input {
+    background-color: #faebd7;
+    padding: 0.5em 1em;
+    font-size: 1.25rem;
+}
+#subscribe button {
+    padding: 0.5em 1em;
+    background: #121212;
+    font-size: 1.25rem;
+    font-variant: small-caps;
+    color: #faebd7;
 }
 #carousel {
     width: 100%;
