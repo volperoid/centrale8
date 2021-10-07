@@ -310,7 +310,7 @@ h1 span {
 footer {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 3fr 1fr 3rem;
+    grid-template-rows: 80% 20% 3rem;
     scroll-snap-align: start;
     width: 100%;
     height: 50vh;
@@ -329,24 +329,44 @@ footer a:hover {
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1.5fr 1.5fr;
-    grid-template-rows: 1fr max-content;
+    grid-template-columns: 1fr 1fr 1fr 1fr 3fr;
+    grid-template-rows: 1fr;
     align-items: center;
     justify-items: center;
+    justify-items: center;
+    padding: 5% 0;
     background-color: rgb(30, 35, 40);
 }
-#panel > div {
+#services,
+#pricing,
+#resources,
+#company {
+    height: 100%;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: max-content max-content;
     gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content 1fr;
     align-items: center;
+    justify-items: flex-start;
     justify-content: center;
 }
-#panel h3,
-#panel ul,
+#about {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content 1fr;
+    gap: 1rem;
+}
+#about .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+#panel ul {
+    height: 100%;
+}
 #panel li {
-    width: 100%;
+    margin: 0.5rem 0;
 }
 #carousel {
     width: 100%;
